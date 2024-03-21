@@ -1,0 +1,53 @@
+# This CITATION.cff file was generated with cffinit.
+# Visit https://bit.ly/cffinit to generate yours today!
+
+cff-version: 1.2.0
+title: KeY Tutorial @ FM2024
+message: >-
+  If you use this dataset, please cite it using the metadata
+  from this file.
+type: dataset
+authors:
+  - orcid: 'https://orcid.org/0000-0002-9672-3291'
+    given-names: Bernhard
+    family-names: Beckert
+    email: beckert@kit.edu
+    affiliation: Karlsruhe Insititute of Technology
+  - given-names: Richard
+    family-names: Bubel
+  - given-names: '  Daniel'
+    family-names: ' Drodt'
+    orcid: 'https://orcid.org/2000-0000-3303-6822'
+    affiliation: TU Darmstadt
+  - {}
+identifiers:
+  - type: url
+    value: 'https://key-project.org/'
+    description: Project's Homepage
+repository-code: 'https://github.com/keyproject/key'
+url: 'https://key-project.org'
+abstract: >-
+  The \KeY tool is a state-of-the-art deductive program
+  verifier for
+    the Java language. Its verification engine is based on a sequent
+    calculus for dynamic logic, realizing forward symbolic execution of
+    the target program, whereby all symbolic paths through a program are
+    explored. Method contracts make verification scalable, because one
+    can prove one method at a time to be correct relative to its
+    contract. \KeY combines auto-active and fine-grained proof
+    interaction which is possible both at the level of the verification
+    target and its specification, as well as at the level of proof rules
+    and program logic. This makes \KeY well-suited for teaching program
+    verification, but also permits proof debugging at the source code
+    level. The latter made it possible to verify some of the most
+    complex Java code to date with \KeY. The article provides a
+    self-contained introduction to the working principles and the
+    practical usage of \KeY for anyone with basic knowledge in logic and
+    formal methods.
+keywords:
+  - Program verification
+  - Deductive verification
+  - Dynamic Logic
+  - Java Modeling Language
+license: GPL-2.0-only
+version: 0.9.0
