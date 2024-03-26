@@ -1,8 +1,6 @@
 cff-version: 1.2.0
 title: KeY Tutorial @ FM2024
-message: >-
-  If you use this dataset, please cite it using the metadata
-  from this file.
+message: 'Companion Artifact'
 type: dataset
 authors:
   - orcid: 'https://orcid.org/0000-0002-9672-3291'
@@ -19,18 +17,15 @@ authors:
   - given-names: 'Reiner'
     family-names: 'Hähnle'
     orcid: 'https://orcid.org/0000-0001-8000-7613'
-
   - given-names: 'Florian'
     family-names: 'Lanzinger'
     orcid: 'https://orcid.org/0000-0001-8560-6324'
   - given-names: 'Wolfram'
     family-names: 'Pfeifer'
     orcid: 'https://orcid.org/0000-0002-9478-9641'
-
   - given-names: 'Mattias'
     family-names: 'Ulbrich'
     orcid: 'https://orcid.org/0000-0002-2350-1831'
- 
   - given-names: 'Alexander'
     family-names: 'Weigl'
     orcid: 'https://orcid.org/0000-0001-8446-4598'
@@ -48,9 +43,9 @@ abstract: >-
     level. The latter made it possible to verify some of the most complex Java code to date with KeY. The article provides a
     self-contained introduction to the working principles and the practical usage of \KeY for anyone with basic knowledge in logic and formal methods.
 keywords:
-  - Program verification
-  - Deductive verification
-  - Dynamic Logic
-  - Java Modeling Language
-license: GPL-2.0-only
+  - "Program verification"
+  - "Deductive verification"
+  - "Dynamic Logic"
+  - "Java Modeling Language"
+license: "GPL-2.0-only"
 version: 0.9.0
