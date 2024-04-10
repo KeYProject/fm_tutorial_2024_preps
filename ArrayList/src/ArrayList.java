@@ -21,7 +21,7 @@ public class ArrayList implements List {
     public /*@ pure @*/ ArrayList() {
         this.array = new int[10];
         //@ set seq = \seq_empty;
-        //@ set footprint = \set_union(\all_fields(array), \all_fields(this));
+        //@ set footprint = \locset(array[*], this.*);
     }
 
     public int get(int index) {
@@ -37,8 +37,8 @@ public class ArrayList implements List {
             array = Arrays.copyOf(array, array.length + 10);
         }
         array[size++] = o;
-        //@ set seq = \seq_concat(seq, \seq_singleton(o));
-        //@ set footprint = \set_union(\all_fields(array), \all_fields(this));
+        //@ set seq = seq + \seq(o);
+        //@ set footprint = \locset(array[*], this.*);
     }
 
     public int find(int value) {
@@ -125,7 +125,7 @@ public class ArrayList implements List {
         int t = array[a];
         array[a] = array[b];
         array[b] = t;
-        //@ set seq = \seq_put(seq, a, array[a]);
-        //@ set seq = \seq_put(seq, b, array[b]);
+        //@ set seq = \seq_upd(seq, a, array[a]);
+        //@ set seq = \seq_upd(seq, b, array[b]);
     }
 }
