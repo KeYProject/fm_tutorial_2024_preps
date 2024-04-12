@@ -11,8 +11,7 @@ public class ArrayList implements List {
       @ private invariant 0 <= size && size <= array.length;
       @ private invariant (\forall int i; 0 <= i && i < size; array[i] != null);
       @
-      @ private invariant seq.length == size;
-      @ private invariant (\forall int i; 0 <= i && i < size; array[i] == (\bigint)seq[i]);
+      @ private invariant seq == \seq_sub(\array2seq(array), 0, size);
       @*/
 
     /*@ public normal_behaviour
