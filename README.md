@@ -2,7 +2,7 @@
 
 This repository contains the necessary tools for the KeY Tool tutorial on the Formal Methods 2024. 
 
-The KeY tool is a state-of-the-art deductive program verifier for the Java language. Its verification engine is based on a sequent calculus for dynamic logic, realizing forward symbolic execution of the target program, whereby all symbolic paths through a program are explored. Method contracts make verification scalable, because one can prove one method at a time to be correct relative to its contract. \KeY combines auto-active and fine-grained proof interaction which is possible both at the level of the verification target and its specification, as well as at the level of proof rules and program logic. This makes \KeY well-suited for teaching program verification, but also permits proof debugging at the source code level. The latter made it possible to verify some of the most complex Java code to date with \KeY. The article provides a self-contained introduction to the working principles and the practical usage of \KeY for anyone with basic knowledge in logic and formal methods.
+The KeY tool is a state-of-the-art deductive program verifier for the Java language. Its verification engine is based on a sequent calculus for dynamic logic, realizing forward symbolic execution of the target program, whereby all symbolic paths through a program are explored. Method contracts make verification scalable, because one can prove one method at a time to be correct relative to its contract. KeY combines auto-active and fine-grained proof interaction which is possible both at the level of the verification target and its specification, as well as at the level of proof rules and program logic. This makes KeY well-suited for teaching program verification, but also permits proof debugging at the source code level. The latter made it possible to verify some of the most complex Java code to date with KeY. The article provides a self-contained introduction to the working principles and the practical usage of KeY for anyone with basic knowledge in logic and formal methods.
 
 A video of the tutorial will be provided [here](#).
 
@@ -16,15 +16,15 @@ Additionally, we provide in this artifact the proofs for all proof obligations i
 We also provide a copy of the current wqorking KeY and version: You can easily use `make`: 
 
 ```
-$ make start    # to start KeY
+$ java -jar tools/key-2.13.0-exe.jar    # to start KeY
 ```
 
 ```
-$ make verify_bs # verify binary search
+$ cd BinarySearch; ./prove.sh  # verify binary search
 ```
 
 ```
-$ make verify_al # verify the array list 
+$ cd ArrayList; ./prove.sh # verify the array list 
 ```
 
 
