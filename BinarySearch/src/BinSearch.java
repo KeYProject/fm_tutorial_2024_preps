@@ -1,18 +1,18 @@
 class BinSearch {
-   private int a[];
-
+    
   /*@ private normal_behavior
     @   requires   (\exists int idx; 0 <= idx < a.length; a[idx] == v);
     @   requires   (\forall int x, y; 0 <= x < y < a.length; a[x] <= a[y]);
     @   ensures    0 <= \result < a.length;
     @   ensures    a[\result] == v;
     @   assignable \nothing;
-    @ also private exceptional_behavior
+    @ also 
+    @   private exceptional_behavior
     @   requires   !(\exists int idx; 0 <= idx < a.length; a[idx] == v);
     @   assignable \nothing;
     @   signals_only RuntimeException;
     @*/
-  private int binSearch(int v) {
+  private int binSearch(int[] a, int v) {
     int low = 0;
     int up = a.length;
   
@@ -41,12 +41,12 @@ class BinSearch {
     @   assignable  \nothing;
     @   measured_by up - low;
     @*/
-  private int binSearchR(int v, int low, int up) {
+  private int binSearchR(int[] a, int v, int low, int up) {
     if (low < up) {
       int mid = low + ((up - low) / 2);
       if (v == a[mid]) { return mid;
-      } else if (v < a[mid]) { return binSearchR(v, low, mid);
-      } else { return binSearchR(v, mid + 1, up); }
+      } else if (v < a[mid]) { return binSearchR(a, v, low, mid);
+      } else { return binSearchR(a, v, mid + 1, up); }
     }
     return -1;
   }  
